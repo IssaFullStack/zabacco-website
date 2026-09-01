@@ -113,7 +113,6 @@ export default function Navbar() {
           </a>
         </nav>
       </div>
-      {(scrolled || open) && <div className="brandline h-[2px] w-full" aria-hidden />}
     </header>
   )
 }

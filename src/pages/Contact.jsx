@@ -181,10 +181,6 @@ export default function Contact() {
                 >
                   Send enquiry
                 </button>
-                <p className="text-sm leading-relaxed text-ink/50">
-                  This form opens your email client with the details filled in. To connect it to a
-                  server or a form service, replace the submit handler in Contact.jsx.
-                </p>
               </form>
             )}
           </div>
@@ -195,8 +191,8 @@ export default function Contact() {
         <div className="shell">
           <h2 className="text-2xl sm:text-3xl">Find the office</h2>
           <p className="mt-4 max-w-prose text-sm leading-relaxed text-frond">
-            The office is on Kikwajuni Street in the Town Area of Zanzibar. Replace the frame below
-            with an embedded map for the exact entrance.
+            We are on Kikwajuni Street in the Town Area of Zanzibar, a short drive from the ferry
+            terminal and Zanzibar International Airport.
           </p>
           <div className="mt-8 aspect-[16/7] w-full overflow-hidden border border-ivory/20">
             <iframe

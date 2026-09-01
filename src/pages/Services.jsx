@@ -1,5 +1,6 @@
-import { PageHeader, ContactCta } from '../components/Ui'
-import { services } from '../data/site'
+import { PageHeader, ContactCta, SectionHead } from '../components/Ui'
+import { Accordion } from '../components/Widgets'
+import { services, faqs } from '../data/site'
 
 export default function Services() {
   return (
@@ -53,6 +54,18 @@ export default function Services() {
           </section>
         ))}
       </div>
+
+      <section className="bg-ivory py-20 sm:py-28">
+        <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div className="lg:sticky lg:top-40 lg:self-start">
+            <SectionHead
+              title="Questions clients ask first."
+              intro="If yours is not here, write to the office and we will answer it directly."
+            />
+          </div>
+          <Accordion items={faqs} />
+        </div>
+      </section>
 
       <ContactCta
         title="Not sure which of these your project needs?"

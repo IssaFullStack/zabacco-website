@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import { SectionHead, ContactCta, Reveal } from '../components/Ui'
+import HeroSlider from '../components/HeroSlider'
+import Carousel from '../components/Carousel'
+import { Marquee, Accordion } from '../components/Widgets'
 import {
   approach,
   differentiators,
+  faqs,
   gallery,
   intro,
   leadership,
@@ -18,49 +22,7 @@ const [ceo, principal] = leadership
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[94vh] overflow-hidden bg-abyss text-ivory">
-        <div className="absolute inset-0">
-          <img
-            src="./assets/img/field-01.jpg"
-            alt=""
-            className="h-full w-full animate-driftin object-cover object-center opacity-[0.32]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-abyss via-abyss/92 to-abyss/45" />
-          <div className="absolute inset-0 bg-gradient-to-t from-abyss via-transparent to-abyss/80" />
-          <div className="absolute -left-32 top-1/4 h-[28rem] w-[28rem] rounded-full bg-palm/25 blur-[130px]" />
-          <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-leaf/10 blur-[130px]" />
-        </div>
-        <div className="lattice pointer-events-none absolute -left-16 bottom-8 h-80 w-80 opacity-[0.09]" aria-hidden />
-
-        <div className="shell relative flex min-h-[94vh] flex-col justify-end pb-20 pt-40">
-          <p className="flex animate-rise items-center gap-3 text-sm font-medium text-leaf [animation-delay:100ms]">
-            <span className="h-px w-10 bg-leaf" aria-hidden />
-            Zanzibar, Tanzania
-          </p>
-          <h1 className="mt-7 max-w-4xl animate-rise text-[2.7rem] leading-[1.04] [animation-delay:200ms] sm:text-6xl lg:text-[4.6rem]">
-            {intro.heroTitle}
-          </h1>
-          <div className="brandline mt-9 h-[3px] w-full max-w-lg origin-left animate-drawline" aria-hidden />
-          <p className="mt-8 max-w-xl animate-rise lede text-frond [animation-delay:400ms]">
-            {intro.heroBody}
-          </p>
-          <div className="mt-10 flex animate-rise flex-wrap gap-4 [animation-delay:520ms]">
-            <Link
-              to="/services"
-              className="rounded-full bg-leaf px-8 py-4 text-sm font-semibold text-abyss shadow-lift transition-colors duration-300 hover:bg-ivory"
-            >
-              See what we do
-            </Link>
-            <Link
-              to="/projects"
-              className="rounded-full border border-ivory/35 px-8 py-4 text-sm font-semibold text-ivory transition-colors duration-300 hover:border-leaf hover:text-leaf"
-            >
-              Review our assignments
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* Standing figures */}
       <section className="bg-forest text-ivory">
@@ -249,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects preview */}
+      {/* Projects carousel */}
       <section className="bg-husk py-20 sm:py-28">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-8">
@@ -262,22 +224,26 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-14 border-t border-ink/15">
-            {projects.slice(0, 5).map((p) => (
-              <article
-                key={p.title}
-                className="group grid gap-x-8 gap-y-2 border-b border-ink/15 py-7 transition-colors duration-300 hover:bg-ivory sm:grid-cols-[5rem_1.6fr_1fr]"
-              >
-                <p className="font-display text-lg text-leaf">{p.year}</p>
-                <div>
-                  <h3 className="font-display text-xl leading-snug text-abyss sm:text-2xl">
-                    {p.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-ink/60">{p.client}</p>
-                </div>
-                <p className="text-sm leading-relaxed text-palm">{p.service}</p>
-              </article>
-            ))}
+          <div className="mt-14">
+            <Carousel label="Recent assignments">
+              {projects.slice(0, 6).map((p) => (
+                <article
+                  key={p.title}
+                  className="flex h-full flex-col bg-ivory shadow-plate transition-transform duration-500 ease-tide hover:-translate-y-1"
+                >
+                  <div className="relative flex h-40 flex-col justify-between overflow-hidden bg-forest p-6">
+                    <div className="lattice absolute -right-8 -top-8 h-40 w-40 opacity-[0.12]" aria-hidden />
+                    <span className="relative font-display text-4xl text-leaf">{p.year}</span>
+                    <span className="relative text-sm text-frond">{p.sector}</span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-7">
+                    <h3 className="font-display text-xl leading-snug text-abyss">{p.title}</h3>
+                    <p className="mt-3 text-sm text-ink/60">{p.client}</p>
+                    <p className="mt-auto pt-5 text-sm leading-relaxed text-palm">{p.service}</p>
+                  </div>
+                </article>
+              ))}
+            </Carousel>
           </div>
         </div>
       </section>
@@ -300,23 +266,14 @@ export default function Home() {
       {/* Partners */}
       <section className="bg-forest py-16 text-ivory sm:py-20">
         <div className="shell">
-          <h2 className="text-2xl text-ivory sm:text-3xl">
+          <h2 className="max-w-3xl text-2xl leading-snug text-ivory sm:text-3xl">
             Our work has been funded by, or delivered with, institutions including:
           </h2>
-          <div className="mt-10 grid gap-x-10 gap-y-0 sm:grid-cols-2 lg:grid-cols-4">
-            {partners.map((p) => (
-              <p
-                key={p}
-                className="border-t border-ivory/15 py-4 text-sm leading-relaxed text-frond"
-              >
-                {p}
-              </p>
-            ))}
-          </div>
         </div>
+        <Marquee items={partners} className="mt-10 py-4" />
       </section>
 
-      {/* Gallery strip */}
+      {/* Gallery carousel */}
       <section className="bg-ivory py-20 sm:py-24">
         <div className="shell">
           <div className="flex flex-wrap items-end justify-between gap-6">
@@ -325,20 +282,35 @@ export default function Home() {
               Open the gallery
             </Link>
           </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-3">
-            {gallery.slice(0, 3).map((g) => (
-              <figure key={g.src} className="group relative overflow-hidden bg-forest">
-                <img
-                  src={g.src}
-                  alt={g.caption}
-                  className="h-72 w-full object-cover transition-transform duration-700 ease-tide group-hover:scale-[1.04]"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss/95 to-transparent p-5 pt-16 text-sm leading-snug text-ivory">
-                  {g.caption}
-                </figcaption>
-              </figure>
-            ))}
+          <div className="mt-10">
+            <Carousel label="Photographs from ZABACCO assignments">
+              {gallery.map((g) => (
+                <figure key={g.src} className="group relative overflow-hidden bg-forest">
+                  <img
+                    src={g.src}
+                    alt={g.caption}
+                    className="h-72 w-full object-cover transition-transform duration-700 ease-tide group-hover:scale-[1.05]"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss/95 to-transparent p-5 pt-16 text-sm leading-snug text-ivory">
+                    {g.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </Carousel>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-husk py-20 sm:py-28">
+        <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div className="lg:sticky lg:top-32 lg:self-start">
+            <SectionHead
+              title="Questions clients ask first."
+              intro="If yours is not here, write to the office and we will answer it directly."
+            />
+          </div>
+          <Accordion items={faqs} />
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { PageHeader, ContactCta } from '../components/Ui'
+import Carousel from '../components/Carousel'
 import { gallery } from '../data/site'
 
 export default function Gallery() {
@@ -34,6 +35,21 @@ export default function Gallery() {
         title="How the work actually looks."
         intro="Consultation sessions, technical reviews and partner briefings at the ZABACCO office in Kikwajuni, Zanzibar."
       />
+
+      <section className="bg-ivory pt-16">
+        <div className="shell">
+          <Carousel label="Featured photographs" slideClass="w-[88%] sm:w-[60%] lg:w-[46%]">
+            {gallery.map((g, i) => (
+              <figure key={g.src} className="relative overflow-hidden bg-forest">
+                <img src={g.src} alt={g.caption} className="h-[22rem] w-full object-cover" />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss/95 to-transparent p-6 pt-16 text-sm text-ivory">
+                  {g.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </Carousel>
+        </div>
+      </section>
 
       <section className="bg-ivory py-16 sm:py-20">
         <div className="shell grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

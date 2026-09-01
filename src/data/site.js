@@ -504,6 +504,61 @@ export const partners = [
   'Sida and the Southern Africa Innovation Support programme',
 ]
 
+
+export const heroSlides = [
+  {
+    kicker: 'Zanzibar, Tanzania',
+    title: 'Evidence that stands up, in the places it comes from.',
+    body: 'ZABACCO is a multidisciplinary consultancy based in Zanzibar. We assess environmental and social impact, run field research, and advise institutions building in coastal and island economies.',
+    cta: 'See what we do',
+    ctaTo: '/services',
+    image: './assets/img/field-01.jpg',
+  },
+  {
+    kicker: 'Environmental and social impact assessment',
+    title: 'The approvals your project needs, done to the standard lenders expect.',
+    body: 'End-to-end ESIA against national regulations and the IFC Performance Standards, from scoping through to the monitoring that follows approval. Airports, hotels, submarine cable, sugar, health and education.',
+    cta: 'Review our assignments',
+    ctaTo: '/projects',
+    image: './assets/img/field-04.jpg',
+  },
+  {
+    kicker: 'Fieldwork and consultation',
+    title: 'We collect the baseline ourselves, and we speak with the people affected.',
+    body: 'Water quality, marine ecology, socio-economic surveys and community consultation run in Kiswahili by our own consultants. The credibility of the assessment rests on evidence we gathered.',
+    cta: 'How we work',
+    ctaTo: '/approach',
+    image: './assets/img/field-06.jpg',
+  },
+]
+
+export const faqs = [
+  {
+    q: 'How long does an ESIA take in Zanzibar?',
+    a: 'It depends on the scale of the project and the season, but a full ESIA typically runs three to six months from scoping to submission. Projects touching sensitive marine or coastal habitat, or requiring resettlement, take longer because the baseline and consultation cannot be compressed. We give a realistic timeline at scoping rather than an optimistic one that slips later.',
+  },
+  {
+    q: 'Do you work to international lender standards?',
+    a: 'Yes. We apply the IFC Performance Standards alongside national guidelines, and have delivered work on projects funded by JICA, the World Bank, UNDP and JSPS. Where a specific lender framework applies, we align the assessment to it from the outset rather than retrofitting it at review.',
+  },
+  {
+    q: 'Do you work outside Zanzibar?',
+    a: 'Yes. We work across Zanzibar and mainland Tanzania, and our consultants hold appointments at national institutions including the Tanzania Commission for Science and Technology. For assignments requiring specialist expertise beyond the core team, we draw on a network of national and international experts.',
+  },
+  {
+    q: 'Can you support us after the report is submitted?',
+    a: 'That is usually where the work matters most. Approval conditions, environmental audits, monitoring rounds and lender queries continue long after submission, and we stay available through that period rather than closing the file at delivery.',
+  },
+  {
+    q: 'Do you take on academic and research work?',
+    a: 'Yes. We support research design, data collection and analysis, technical writing and academic quality assurance, and we mentor students and early-career researchers. This is a deliberate part of the firm, not a sideline.',
+  },
+  {
+    q: 'How do we start?',
+    a: 'Send us an outline of the project, the location, the scale and the decision you need evidence for. We will tell you which approvals it triggers, which of our service lines apply, and what a realistic scope and timeline look like before you commit to anything.',
+  },
+]
+
 export const nav = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
