@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-limestone text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    background: #0e5a49;
+    color: #f3f1ea;
+  }
+
+  :focus-visible {
+    outline: 2px solid #c3a05a;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tightest;
+    font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  }
+}
+
+@layer components {
+  /* A carved-door fretwork motif, drawn once and reused as a tint. */
+  .fretwork {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%230E5A49' stroke-width='1'%3E%3Cpath d='M36 2 70 36 36 70 2 36z'/%3E%3Cpath d='M36 18 54 36 36 54 18 36z'/%3E%3Cpath d='M0 0h72v72H0z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 72px 72px;
+  }
+
+  .rule-brass {
+    background-image: linear-gradient(90deg, rgba(195, 160, 90, 0.9), rgba(195, 160, 90, 0));
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-[76rem] px-6 sm:px-8 lg:px-12;
+  }
+
+  .lede {
+    @apply max-w-prose text-[1.0625rem] leading-[1.75] sm:text-lg sm:leading-[1.8];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
