@@ -35,14 +35,14 @@ export default function Gallery() {
         intro="Consultation sessions, technical reviews and partner briefings at the ZABACCO office in Kikwajuni, Zanzibar."
       />
 
-      <section className="bg-limestone py-16 sm:py-20">
+      <section className="bg-ivory py-16 sm:py-20">
         <div className="shell grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {gallery.map((g, i) => (
             <button
               key={g.src}
               type="button"
               onClick={() => setIndex(i)}
-              className="group relative block overflow-hidden bg-deep text-left"
+              className="group relative block overflow-hidden bg-forest text-left"
               aria-label={`Open image: ${g.caption}`}
             >
               <img
@@ -51,7 +51,7 @@ export default function Gallery() {
                 className="h-72 w-full object-cover transition-transform duration-700 ease-tide group-hover:scale-[1.04]"
                 loading="lazy"
               />
-              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss/90 to-transparent p-5 pt-14 text-sm leading-snug text-limestone">
+              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss/90 to-transparent p-5 pt-14 text-sm leading-snug text-ivory">
                 {g.caption}
               </span>
             </button>
@@ -70,7 +70,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={close}
-              className="rounded-full border border-limestone/30 px-5 py-2 text-sm text-limestone transition-colors hover:border-brass hover:text-brass"
+              className="rounded-full border border-ivory/30 px-5 py-2 text-sm text-ivory transition-colors hover:border-leaf hover:text-leaf"
             >
               Close
             </button>
@@ -83,19 +83,19 @@ export default function Gallery() {
             />
           </div>
           <div className="flex flex-wrap items-center justify-between gap-4 pt-5">
-            <p className="max-w-xl text-sm text-seaglass">{gallery[index].caption}</p>
+            <p className="max-w-xl text-sm text-frond">{gallery[index].caption}</p>
             <div className="flex gap-3">
               <button
                 type="button"
                 onClick={() => step(-1)}
-                className="rounded-full border border-limestone/30 px-5 py-2 text-sm text-limestone transition-colors hover:border-brass hover:text-brass"
+                className="rounded-full border border-ivory/30 px-5 py-2 text-sm text-ivory transition-colors hover:border-leaf hover:text-leaf"
               >
                 Previous
               </button>
               <button
                 type="button"
                 onClick={() => step(1)}
-                className="rounded-full border border-limestone/30 px-5 py-2 text-sm text-limestone transition-colors hover:border-brass hover:text-brass"
+                className="rounded-full border border-ivory/30 px-5 py-2 text-sm text-ivory transition-colors hover:border-leaf hover:text-leaf"
               >
                 Next
               </button>

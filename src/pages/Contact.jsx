@@ -3,7 +3,7 @@ import { PageHeader } from '../components/Ui'
 import { org, services } from '../data/site'
 
 const field =
-  'w-full border-b border-deep/25 bg-transparent py-3 text-[1.0625rem] text-deep placeholder:text-ink/35 focus:border-reef focus:outline-none'
+  'w-full border-b border-forest/25 bg-transparent py-3 text-[1.0625rem] text-forest placeholder:text-ink/35 focus:border-palm focus:outline-none'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
@@ -42,36 +42,36 @@ export default function Contact() {
         intro="Write to us with the project, the location and the decision you need evidence for. We answer enquiries within two working days."
       />
 
-      <section className="bg-limestone py-16 sm:py-24">
+      <section className="bg-ivory py-16 sm:py-24">
         <div className="shell grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
           <div>
-            <h2 className="text-3xl text-deep sm:text-4xl">Office details</h2>
-            <div className="mt-5 h-px w-20 bg-brass/70" aria-hidden />
+            <h2 className="text-3xl text-forest sm:text-4xl">Office details</h2>
+            <div className="mt-5 h-px w-20 bg-leaf/70" aria-hidden />
 
             <dl className="mt-10 space-y-8">
-              <div className="border-t border-deep/15 pt-5">
+              <div className="border-t border-forest/15 pt-5">
                 <dt className="text-sm text-ink/50">Address</dt>
-                <dd className="mt-2 text-[1.0625rem] leading-relaxed text-deep">{org.address}</dd>
+                <dd className="mt-2 text-[1.0625rem] leading-relaxed text-forest">{org.address}</dd>
               </div>
-              <div className="border-t border-deep/15 pt-5">
+              <div className="border-t border-forest/15 pt-5">
                 <dt className="text-sm text-ink/50">Telephone and fax</dt>
-                <dd className="mt-2 text-[1.0625rem] text-deep">
-                  <a className="hover:text-reef" href={`tel:${org.phone.replace(/\s/g, '')}`}>
+                <dd className="mt-2 text-[1.0625rem] text-forest">
+                  <a className="hover:text-palm" href={`tel:${org.phone.replace(/\s/g, '')}`}>
                     {org.phone}
                   </a>
                 </dd>
               </div>
-              <div className="border-t border-deep/15 pt-5">
+              <div className="border-t border-forest/15 pt-5">
                 <dt className="text-sm text-ink/50">Email</dt>
-                <dd className="mt-2 text-[1.0625rem] text-deep">
-                  <a className="hover:text-reef" href={`mailto:${org.email}`}>
+                <dd className="mt-2 text-[1.0625rem] text-forest">
+                  <a className="hover:text-palm" href={`mailto:${org.email}`}>
                     {org.email}
                   </a>
                 </dd>
               </div>
-              <div className="border-t border-deep/15 pt-5">
+              <div className="border-t border-forest/15 pt-5">
                 <dt className="text-sm text-ink/50">Office hours</dt>
-                <dd className="mt-2 text-[1.0625rem] text-deep">{org.hours}</dd>
+                <dd className="mt-2 text-[1.0625rem] text-forest">{org.hours}</dd>
               </div>
             </dl>
 
@@ -86,12 +86,12 @@ export default function Contact() {
           </div>
 
           <div>
-            <h2 className="text-3xl text-deep sm:text-4xl">Send an enquiry</h2>
-            <div className="mt-5 h-px w-20 bg-brass/70" aria-hidden />
+            <h2 className="text-3xl text-forest sm:text-4xl">Send an enquiry</h2>
+            <div className="mt-5 h-px w-20 bg-leaf/70" aria-hidden />
 
             {sent ? (
-              <div className="mt-10 border-l-2 border-reef bg-sand/60 p-8">
-                <p className="font-display text-2xl text-deep">Your email client is open.</p>
+              <div className="mt-10 border-l-2 border-palm bg-husk/60 p-8">
+                <p className="font-display text-2xl text-forest">Your email client is open.</p>
                 <p className="mt-4 text-[1.0625rem] leading-relaxed text-ink/70">
                   Send the drafted message and we will reply within two working days. If nothing
                   opened, write to {org.email} directly.
@@ -99,7 +99,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={() => setSent(false)}
-                  className="mt-6 border-b border-reef/60 pb-1 text-sm font-medium text-reef"
+                  className="mt-6 border-b border-palm/60 pb-1 text-sm font-medium text-palm"
                 >
                   Write another enquiry
                 </button>
@@ -177,7 +177,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="rounded-full bg-reef px-8 py-3.5 text-sm font-semibold text-limestone transition-colors duration-300 hover:bg-deep"
+                  className="rounded-full bg-palm px-8 py-3.5 text-sm font-semibold text-ivory transition-colors duration-300 hover:bg-forest"
                 >
                   Send enquiry
                 </button>
@@ -191,14 +191,14 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-abyss py-16 text-limestone">
+      <section className="bg-abyss py-16 text-ivory">
         <div className="shell">
           <h2 className="text-2xl sm:text-3xl">Find the office</h2>
-          <p className="mt-4 max-w-prose text-sm leading-relaxed text-seaglass">
+          <p className="mt-4 max-w-prose text-sm leading-relaxed text-frond">
             The office is on Kikwajuni Street in the Town Area of Zanzibar. Replace the frame below
             with an embedded map for the exact entrance.
           </p>
-          <div className="mt-8 aspect-[16/7] w-full overflow-hidden border border-limestone/20">
+          <div className="mt-8 aspect-[16/7] w-full overflow-hidden border border-ivory/20">
             <iframe
               title="Map of Zanzibar Town"
               src="https://www.openstreetmap.org/export/embed.html?bbox=39.17%2C-6.19%2C39.23%2C-6.14&layer=mapnik"

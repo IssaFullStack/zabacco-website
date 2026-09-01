@@ -73,6 +73,7 @@ export const values = [
 export const services = [
   {
     slug: 'esia',
+    short: 'Impact assessment',
     title: 'Environmental and Social Impact Assessment',
     summary:
       'End-to-end ESIA in compliance with national regulations and international standards, so projects are environmentally sound, socially inclusive and legally defensible.',
@@ -87,6 +88,7 @@ export const services = [
   },
   {
     slug: 'business',
+    short: 'Business advisory',
     title: 'Business and Development Consulting',
     summary:
       'Support for organisations, institutions and entrepreneurs planning, developing and implementing sustainable initiatives.',
@@ -102,6 +104,7 @@ export const services = [
   },
   {
     slug: 'research',
+    short: 'Research support',
     title: 'Research and Academic Consulting',
     summary:
       'Research and academic support that strengthens research outputs, analytical capacity and knowledge development.',
@@ -117,6 +120,7 @@ export const services = [
   },
   {
     slug: 'innovation',
+    short: 'Technology transfer',
     title: 'Innovation and Technology Transfer',
     summary:
       'Strengthening the innovation ecosystem by supporting the development, adaptation and transfer of technologies.',
@@ -130,6 +134,7 @@ export const services = [
   },
   {
     slug: 'capacity',
+    short: 'Training',
     title: 'Capacity Building and Training',
     summary:
       'Tailored training programmes that strengthen skills, knowledge and institutional capacity.',
@@ -143,6 +148,7 @@ export const services = [
   },
   {
     slug: 'stakeholder',
+    short: 'Community engagement',
     title: 'Stakeholder Engagement and Community Development',
     summary:
       'Inclusive and participatory approaches to project planning and implementation.',
@@ -453,10 +459,56 @@ export const gallery = [
   },
 ]
 
+
+export const approach = [
+  {
+    step: 'Scoping',
+    title: 'We establish what the project actually triggers',
+    body: 'Before any fieldwork we map the regulatory position: which national approvals apply, whether lender standards such as the IFC Performance Standards are engaged, and what the decision timeline realistically allows. Clients get an honest scope, not an optimistic one.',
+  },
+  {
+    step: 'Baseline',
+    title: 'We collect the evidence ourselves',
+    body: 'Water quality, marine ecology, socio-economic surveys and spatial data are gathered by our own consultants working in the field. We do not subcontract the baseline, because the credibility of everything downstream rests on it.',
+  },
+  {
+    step: 'Consultation',
+    title: 'We speak with the people a project will affect',
+    body: 'Stakeholder mapping identifies who carries the risk and who holds the local knowledge. Consultations are run in Kiswahili, in the community, at times people can actually attend, and what is said is recorded and reflected in the assessment.',
+  },
+  {
+    step: 'Assessment',
+    title: 'We analyse impact against a defensible method',
+    body: 'Impacts are characterised, rated and tested by a multidisciplinary team. Where the evidence is uncertain we say so, rather than dressing a judgement as a measurement.',
+  },
+  {
+    step: 'Management plan',
+    title: 'We write mitigation that can be implemented',
+    body: 'An Environmental and Social Management Plan is only useful if the client can run it. Ours name responsibilities, monitoring indicators and costs, so the commitments survive past approval.',
+  },
+  {
+    step: 'Follow-through',
+    title: 'We stay available after the report is signed',
+    body: 'Approval conditions, audits, monitoring rounds and lender queries continue long after submission. We support clients through that period rather than closing the file at delivery.',
+  },
+]
+
+export const partners = [
+  'Japan International Cooperation Agency (JICA)',
+  'World Bank',
+  'United Nations Development Programme (UNDP)',
+  'Japan Society for the Promotion of Science (JSPS)',
+  'Tanzania Commission for Science and Technology',
+  'State University of Zanzibar',
+  'Zanzibar Fisheries and Marine Resources Research Institute',
+  'Sida and the Southern Africa Innovation Support programme',
+]
+
 export const nav = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
+  { to: '/approach', label: 'Approach' },
   { to: '/team', label: 'Team' },
   { to: '/projects', label: 'Projects' },
   { to: '/gallery', label: 'Gallery' },

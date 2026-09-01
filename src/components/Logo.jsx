@@ -1,31 +1,27 @@
 import { Link } from 'react-router-dom'
 
 export default function Logo({ tone = 'dark', className = '' }) {
-  const isDark = tone === 'dark' // dark = placed on a dark ground
+  const onDark = tone === 'dark'
   return (
-    <Link
-      to="/"
-      className={`group flex items-center gap-3 ${className}`}
-      aria-label="ZABACCO home"
-    >
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-limestone ring-1 ring-brass/40 sm:h-12 sm:w-12">
+    <Link to="/" className={`group flex items-center gap-3.5 ${className}`} aria-label="ZABACCO home">
+      <span className="plate h-12 w-12 shrink-0 ring-1 ring-leaf/30 sm:h-14 sm:w-14">
         <img
-          src="./assets/img/logo.png"
+          src="./assets/img/logo-mark.png"
           alt=""
-          className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+          className="h-9 w-9 object-contain sm:h-11 sm:w-11"
         />
       </span>
       <span className="leading-none">
         <span
-          className={`block font-display text-[1.35rem] tracking-tightest ${
-            isDark ? 'text-limestone' : 'text-deep'
+          className={`block font-display text-[1.4rem] tracking-tightest sm:text-[1.55rem] ${
+            onDark ? 'text-ivory' : 'text-abyss'
           }`}
         >
           ZABACCO
         </span>
         <span
-          className={`mt-1 block text-[0.66rem] font-medium tracking-[0.14em] ${
-            isDark ? 'text-seaglass' : 'text-reef/70'
+          className={`mt-1.5 block text-[0.65rem] font-medium italic tracking-[0.1em] ${
+            onDark ? 'text-leaf' : 'text-palm'
           }`}
         >
           Unlocks Local Potentials
