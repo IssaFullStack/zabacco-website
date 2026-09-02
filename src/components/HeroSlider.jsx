@@ -26,7 +26,7 @@ export default function HeroSlider() {
 
   return (
     <section
-      className="relative min-h-[94vh] overflow-hidden bg-abyss text-ivory"
+      className="relative min-h-[min(94vh,50rem)] overflow-hidden bg-abyss text-ivory"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -64,7 +64,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Copy */}
-      <div className="shell relative flex min-h-[94vh] flex-col justify-end pb-28 pt-40 sm:pb-32">
+      <div className="shell relative flex min-h-[min(94vh,50rem)] flex-col justify-end pb-28 pt-40 sm:pb-32">
         <div aria-live="polite" aria-atomic="true">
           {heroSlides.map((slide, i) =>
             i === index ? (

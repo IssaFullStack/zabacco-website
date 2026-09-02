@@ -26,13 +26,13 @@ export default function Home() {
 
       {/* Standing figures */}
       <section className="bg-forest text-ivory">
-        <div className="shell grid gap-px sm:grid-cols-2 lg:grid-cols-4">
+        <div className="shell grid gap-px sm:grid-cols-2 nav:grid-cols-4">
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className={`py-9 sm:py-11 ${i > 0 ? 'lg:border-l lg:border-ivory/12 lg:pl-8' : ''} ${
+              className={`py-9 sm:py-11 ${i > 0 ? 'nav:border-l nav:border-ivory/12 nav:pl-8' : ''} ${
                 i === 1 || i === 3 ? 'sm:border-l sm:border-ivory/12 sm:pl-8' : ''
-              } ${i > 1 ? 'sm:border-t sm:border-ivory/12 lg:border-t-0' : ''}`}
+              } ${i > 1 ? 'sm:border-t sm:border-ivory/12 nav:border-t-0' : ''}`}
             >
               <p className="font-display text-5xl text-leaf sm:text-[3.4rem]">{s.value}</p>
               <p className="mt-3 max-w-[24ch] text-sm leading-relaxed text-frond">{s.label}</p>
@@ -43,7 +43,7 @@ export default function Home() {
 
       {/* Positioning */}
       <section className="bg-ivory py-20 sm:py-28">
-        <div className="shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="shell grid gap-12 nav:grid-cols-[0.9fr_1.1fr] nav:gap-20">
           <div>
             <SectionHead title="An independent firm with roots in the archipelago." />
             <p className="mt-8 font-display text-2xl leading-[1.4] text-palm sm:text-[1.8rem]">
@@ -84,7 +84,7 @@ export default function Home() {
             title="Six service lines, one standard of evidence."
             intro="Each assignment is led by a named consultant and delivered by a team drawn from across the firm."
           />
-          <div className="mt-14 grid gap-px bg-ink/12 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-px bg-ink/12 sm:grid-cols-2 nav:grid-cols-3">
             {services.map((service) => (
               <Link
                 key={service.slug}
@@ -120,17 +120,16 @@ export default function Home() {
             intro="Two principals carry responsibility for everything the firm produces: one for its scientific direction, one for its delivery."
           />
 
-          <div className="mt-16 grid gap-14 lg:grid-cols-2 lg:gap-16">
+          <div className="mt-16 grid gap-14 nav:grid-cols-2 nav:gap-16">
             {[ceo, principal].map((person) => (
               <Reveal key={person.slug}>
                 <article className="flex h-full flex-col">
-                  <div className="relative w-full max-w-[19rem]">
-                    <div className="absolute -left-3 -top-3 h-full w-full border border-leaf/45" aria-hidden />
-                    <div className="relative bg-ivory p-2.5 shadow-lift">
+                  <div className="portrait w-full max-w-[19rem]">
+                    <div className="portrait__plate">
                       <img
                         src={person.photo}
                         alt={`Portrait of ${person.name}`}
-                        className="aspect-[4/5] w-full object-cover object-top"
+                        className="portrait__img"
                       />
                     </div>
                   </div>
@@ -157,7 +156,7 @@ export default function Home() {
 
           {/* CEO message */}
           <div className="mt-20 border-t border-ivory/15 pt-14">
-            <div className="grid gap-10 lg:grid-cols-[0.4fr_1.6fr] lg:gap-16">
+            <div className="grid gap-10 nav:grid-cols-[0.4fr_1.6fr] nav:gap-16">
               <p className="text-sm font-medium text-leaf">From the Chief Executive</p>
               <blockquote className="space-y-7">
                 {ceo.message.map((para, i) => (
@@ -199,7 +198,7 @@ export default function Home() {
               The full method
             </Link>
           </div>
-          <ol className="mt-14 grid gap-px bg-ink/12 sm:grid-cols-2 lg:grid-cols-3">
+          <ol className="mt-14 grid gap-px bg-ink/12 sm:grid-cols-2 nav:grid-cols-3">
             {approach.map((a, i) => (
               <li key={a.step} className="bg-ivory p-8">
                 <p className="font-display text-3xl text-leaf">{String(i + 1).padStart(2, '0')}</p>
@@ -252,7 +251,7 @@ export default function Home() {
       <section className="bg-ivory py-20 sm:py-28">
         <div className="shell">
           <SectionHead title="Why clients work with us." />
-          <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2 nav:grid-cols-3">
             {differentiators.map((d) => (
               <div key={d.title} className="border-t-2 border-leaf pt-5">
                 <h3 className="font-display text-xl text-abyss">{d.title}</h3>
@@ -303,8 +302,8 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="bg-husk py-20 sm:py-28">
-        <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <div className="lg:sticky lg:top-32 lg:self-start">
+        <div className="shell grid gap-12 nav:grid-cols-[0.8fr_1.2fr] nav:gap-20">
+          <div className="nav:sticky nav:top-32 nav:self-start">
             <SectionHead
               title="Questions clients ask first."
               intro="If yours is not here, write to the office and we will answer it directly."

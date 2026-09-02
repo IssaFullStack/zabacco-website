@@ -33,14 +33,14 @@ export default function Navbar() {
       <div className="shell flex items-center justify-between gap-6">
         <Logo tone="dark" />
 
-        <nav className="hidden items-center gap-7 xl:flex" aria-label="Main">
+        <nav className="hidden items-center gap-5 nav:flex 2xl:gap-7" aria-label="Main">
           {nav.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.to === '/'}
               className={({ isActive }) =>
-                `relative py-1 text-sm font-medium transition-colors duration-300 ${
+                `relative whitespace-nowrap py-1 text-[0.82rem] font-medium transition-colors duration-300 xl:text-sm ${
                   isActive ? 'text-leaf' : 'text-ivory/85 hover:text-ivory'
                 }`
               }
@@ -59,7 +59,7 @@ export default function Navbar() {
           ))}
           <a
             href={`mailto:${org.email}`}
-            className="rounded-full bg-leaf px-5 py-2.5 text-sm font-semibold text-abyss transition-colors duration-300 hover:bg-ivory"
+            className="hidden whitespace-nowrap rounded-full bg-leaf px-5 py-2.5 text-sm font-semibold text-abyss transition-colors duration-300 hover:bg-ivory xl:inline-block"
           >
             Request a proposal
           </a>
@@ -68,7 +68,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="grid h-11 w-11 place-items-center rounded-full border border-ivory/25 text-ivory xl:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full border border-ivory/25 text-ivory nav:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -83,7 +83,7 @@ export default function Navbar() {
 
       <div
         id="mobile-nav"
-        className={`overflow-hidden xl:hidden ${open ? 'max-h-[85vh]' : 'max-h-0'} transition-[max-height] duration-500 ease-tide`}
+        className={`overflow-hidden nav:hidden ${open ? 'max-h-[85vh]' : 'max-h-0'} transition-[max-height] duration-500 ease-tide`}
       >
         <nav className="shell flex flex-col pb-8 pt-6" aria-label="Main, mobile">
           {nav.map((item) => (

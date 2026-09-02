@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute -right-32 -top-20 h-96 w-96 rounded-full bg-palm/20 blur-[120px]" aria-hidden />
 
       <div className="shell relative py-16 sm:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr]">
+        <div className="grid gap-12 nav:grid-cols-[1.3fr_0.8fr_0.8fr_1fr]">
           <div>
             <Logo tone="dark" />
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-frond">

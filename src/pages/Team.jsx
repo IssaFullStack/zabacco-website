@@ -3,19 +3,17 @@ import { leadership, team } from '../data/site'
 
 function LeaderBlock({ person, reverse }) {
   return (
-    <article className="shell grid gap-12 py-16 sm:py-20 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
-      <figure className={reverse ? 'lg:order-2' : ''}>
-        <div className="relative max-w-sm">
-          <div
-            className="absolute -bottom-4 -right-4 h-full w-full border border-leaf/50"
-            aria-hidden
-          />
-          <img
-            src={person.photo}
-            alt={`Portrait of ${person.name}`}
-            className="relative w-full object-cover"
-            loading="lazy"
-          />
+    <article className="shell grid gap-12 py-16 sm:py-20 nav:grid-cols-[0.75fr_1.25fr] nav:gap-20">
+      <figure className={reverse ? 'nav:order-2' : ''}>
+        <div className="portrait max-w-sm">
+          <div className="portrait__plate">
+            <img
+              src={person.photo}
+              alt={`Portrait of ${person.name}`}
+              className="portrait__img"
+              loading="lazy"
+            />
+          </div>
         </div>
         <figcaption className="mt-7 max-w-sm">
           <h2 className="font-display text-2xl leading-tight text-forest">{person.name}</h2>
@@ -31,7 +29,7 @@ function LeaderBlock({ person, reverse }) {
         </figcaption>
       </figure>
 
-      <div className={reverse ? 'lg:order-1' : ''}>
+      <div className={reverse ? 'nav:order-1' : ''}>
         <div className="space-y-5">
           {person.bio.map((p, i) => (
             <p
@@ -75,7 +73,7 @@ export default function Team() {
             title="Directors and specialists."
             intro="Each directorate is led by a consultant who takes technical responsibility for the assignments under it."
           />
-          <div className="mt-14 grid gap-x-16 gap-y-14 lg:grid-cols-2">
+          <div className="mt-14 grid gap-x-16 gap-y-14 nav:grid-cols-2">
             {team.map((person) => (
               <article key={person.name} className="border-t border-ivory/20 pt-7">
                 <h3 className="font-display text-2xl leading-tight text-ivory">

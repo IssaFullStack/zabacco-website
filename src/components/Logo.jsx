@@ -13,14 +13,14 @@ export default function Logo({ tone = 'dark', className = '' }) {
       </span>
       <span className="leading-none">
         <span
-          className={`block font-display text-[1.4rem] tracking-tightest sm:text-[1.55rem] ${
+          className={`block whitespace-nowrap font-display text-[1.4rem] tracking-tightest sm:text-[1.55rem] ${
             onDark ? 'text-ivory' : 'text-abyss'
           }`}
         >
           ZABACCO
         </span>
         <span
-          className={`mt-1.5 block text-[0.65rem] font-medium italic tracking-[0.1em] ${
+          className={`mt-1.5 block whitespace-nowrap text-[0.65rem] font-medium italic tracking-[0.1em] ${
             onDark ? 'text-leaf' : 'text-palm'
           }`}
         >

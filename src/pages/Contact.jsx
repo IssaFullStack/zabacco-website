@@ -43,7 +43,7 @@ export default function Contact() {
       />
 
       <section className="bg-ivory py-16 sm:py-24">
-        <div className="shell grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+        <div className="shell grid gap-14 nav:grid-cols-[1fr_1.15fr] nav:gap-20">
           <div>
             <h2 className="text-3xl text-forest sm:text-4xl">Office details</h2>
             <div className="mt-5 h-px w-20 bg-leaf/70" aria-hidden />

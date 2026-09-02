@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      screens: {
+        nav: '900px',
+      },
       colors: {
         // Sampled directly from the ZABACCO mark
         leaf: '#7FB927',

@@ -80,8 +80,8 @@ export default function Services() {
             id={service.slug}
             className={`scroll-mt-32 py-16 sm:py-20 ${i % 2 === 1 ? 'bg-husk' : 'bg-ivory'}`}
           >
-            <div className="shell grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
-              <div className="lg:sticky lg:top-40 lg:self-start">
+            <div className="shell grid gap-10 nav:grid-cols-[1fr_1.1fr] nav:gap-20">
+              <div className="nav:sticky nav:top-40 nav:self-start">
                 <h2 className="text-3xl leading-[1.15] text-forest sm:text-[2.5rem]">
                   {service.title}
                 </h2>
@@ -104,8 +104,8 @@ export default function Services() {
       </div>
 
       <section className="bg-ivory py-20 sm:py-28">
-        <div className="shell grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <div className="lg:sticky lg:top-40 lg:self-start">
+        <div className="shell grid gap-12 nav:grid-cols-[0.8fr_1.2fr] nav:gap-20">
+          <div className="nav:sticky nav:top-40 nav:self-start">
             <SectionHead
               title="Questions clients ask first."
               intro="If yours is not here, write to the office and we will answer it directly."

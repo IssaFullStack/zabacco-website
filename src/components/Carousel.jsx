@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
  * Horizontal scroll-snap carousel with arrows and progress dots.
  * Children are rendered as slides; `slideClass` controls slide width.
  */
-export default function Carousel({ children, label, slideClass = 'w-[86%] sm:w-[48%] lg:w-[32%]' }) {
+export default function Carousel({ children, label, slideClass = 'w-[86%] sm:w-[48%] nav:w-[32%]' }) {
   const trackRef = useRef(null)
   const [active, setActive] = useState(0)
   const [atStart, setAtStart] = useState(true)

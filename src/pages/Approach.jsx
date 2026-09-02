@@ -16,7 +16,7 @@ export default function Approach() {
             {approach.map((stage, i) => (
               <li
                 key={stage.step}
-                className="grid gap-x-10 gap-y-4 border-t border-ink/15 py-10 last:border-b lg:grid-cols-[7rem_1fr_1.3fr]"
+                className="grid gap-x-10 gap-y-4 border-t border-ink/15 py-10 last:border-b nav:grid-cols-[7rem_1fr_1.3fr]"
               >
                 <div>
                   <p className="font-display text-4xl text-leaf">
@@ -34,7 +34,7 @@ export default function Approach() {
 
       <section className="relative overflow-hidden bg-abyss py-20 text-ivory sm:py-24">
         <div className="lattice pointer-events-none absolute -left-20 top-0 h-96 w-96 opacity-[0.07]" aria-hidden />
-        <div className="shell relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <div className="shell relative grid gap-12 nav:grid-cols-[0.9fr_1.1fr] nav:gap-20">
           <SectionHead tone="dark" title="What holds the method together." />
           <div>
             <p className="lede text-frond">{about.purpose}</p>
