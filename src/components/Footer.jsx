@@ -91,7 +91,11 @@ export default function Footer() {
             <p>© {new Date().getFullYear()} {org.short}. All rights reserved.</p>
             <p>Registered and operating in Zanzibar, United Republic of Tanzania.</p>
           </div>
-          <p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <Link to="/admin/login" className="transition-colors hover:text-leaf">
+              Staff login
+            </Link>
+            <p>
             Developed and maintained by{' '}
             <a
               href="https://techmento.co.tz"
@@ -101,7 +105,8 @@ export default function Footer() {
             >
               Techmento
             </a>
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

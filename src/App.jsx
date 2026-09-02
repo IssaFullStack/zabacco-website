@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -12,30 +12,42 @@ import Team from './pages/Team'
 import Projects from './pages/Projects'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import { AdminProvider, useAdmin } from './admin/store'
+import AdminLayout from './admin/components/AdminLayout'
+import { ResourceForm, ResourceList } from './admin/pages/Resource'
+import { Account, Dashboard, Enquiries, Login, Settings } from './admin/pages/Screens'
 
-function NotFound() {
+function RequireAuth({ children }) {
+  const { user } = useAdmin()
+  if (!user) return <Navigate to="/admin/login" replace />
+  return children
+}
+
+function AdminArea() {
   return (
-    <section className="grid min-h-[70vh] place-items-center bg-abyss px-6 text-center text-ivory">
-      <div>
-        <h1 className="text-4xl sm:text-5xl">This page has moved on.</h1>
-        <p className="mt-5 text-frond">
-          The address you followed does not exist on this site.
-        </p>
-        <Link
-          to="/"
-          className="mt-8 inline-block rounded-full bg-leaf px-7 py-3 text-sm font-semibold text-abyss"
-        >
-          Return to the home page
-        </Link>
-      </div>
-    </section>
+    <Routes>
+      <Route path="login" element={<Login />} />
+      <Route
+        element={
+          <RequireAuth>
+            <AdminLayout />
+          </RequireAuth>
+        }
+      >
+        <Route index element={<Dashboard />} />
+        <Route path="enquiries" element={<Enquiries />} />
+        <Route path="settings" element={<Settings />} />
+        <Route path="account" element={<Account />} />
+        <Route path=":key" element={<ResourceList />} />
+        <Route path=":key/:id" element={<ResourceForm />} />
+      </Route>
+    </Routes>
   )
 }
 
-export default function App() {
+function PublicSite() {
   return (
     <div className="flex min-h-screen flex-col">
-      <ScrollToTop />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-leaf focus:px-5 focus:py-2 focus:text-sm focus:font-semibold focus:text-abyss"
@@ -60,5 +72,42 @@ export default function App() {
       <WhatsAppButton />
       <BackToTop />
     </div>
+  )
+}
+
+function NotFound() {
+  return (
+    <section className="grid min-h-[70vh] place-items-center bg-abyss px-6 text-center text-ivory">
+      <div>
+        <h1 className="text-4xl sm:text-5xl">This page has moved on.</h1>
+        <p className="mt-5 text-frond">
+          The address you followed does not exist on this site.
+        </p>
+        <Link
+          to="/"
+          className="mt-8 inline-block rounded-full bg-leaf px-7 py-3 text-sm font-semibold text-abyss"
+        >
+          Return to the home page
+        </Link>
+      </div>
+    </section>
+  )
+}
+
+export default function App() {
+  const { pathname } = useLocation()
+  const isAdmin = pathname.startsWith('/admin')
+
+  return (
+    <AdminProvider>
+      {!isAdmin && <ScrollToTop />}
+      {isAdmin ? (
+        <Routes>
+          <Route path="/admin/*" element={<AdminArea />} />
+        </Routes>
+      ) : (
+        <PublicSite />
+      )}
+    </AdminProvider>
   )
 }
