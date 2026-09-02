@@ -53,11 +53,17 @@ export default function Footer() {
             <h2 className="font-display text-lg text-ivory">Office</h2>
             <address className="mt-5 space-y-3 text-sm not-italic text-ivory/70">
               <p className="leading-relaxed">{org.address}</p>
-              <p>
-                <a className="transition-colors hover:text-leaf" href={`tel:${org.phone.replace(/\s/g, '')}`}>
-                  {org.phone}
-                </a>
-              </p>
+              <p className="leading-relaxed text-ivory/50">{org.landmarks}</p>
+              {org.phones.map((phone) => (
+                <p key={phone}>
+                  <a
+                    className="transition-colors hover:text-leaf"
+                    href={`tel:${phone.replace(/\s/g, '')}`}
+                  >
+                    {phone}
+                  </a>
+                </p>
+              ))}
               <p>
                 <a className="transition-colors hover:text-leaf" href={`mailto:${org.email}`}>
                   {org.email}

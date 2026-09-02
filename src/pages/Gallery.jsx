@@ -33,7 +33,7 @@ export default function Gallery() {
       <PageHeader
         kicker="Gallery"
         title="How the work actually looks."
-        intro="Consultation sessions, technical reviews and partner briefings at the ZABACCO office in Kikwajuni, Zanzibar."
+        intro="Consultation sessions, technical reviews and partner briefings at the ZABACCO office in Malindi, Stone Town, Zanzibar."
       />
 
       <section className="bg-ivory pt-16">

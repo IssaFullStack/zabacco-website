@@ -52,13 +52,20 @@ export default function Contact() {
               <div className="border-t border-forest/15 pt-5">
                 <dt className="text-sm text-ink/50">Address</dt>
                 <dd className="mt-2 text-[1.0625rem] leading-relaxed text-forest">{org.address}</dd>
+                <dd className="mt-1.5 text-[0.95rem] leading-relaxed text-ink/60">
+                  {org.landmarks}
+                </dd>
               </div>
               <div className="border-t border-forest/15 pt-5">
-                <dt className="text-sm text-ink/50">Telephone and fax</dt>
-                <dd className="mt-2 text-[1.0625rem] text-forest">
-                  <a className="hover:text-palm" href={`tel:${org.phone.replace(/\s/g, '')}`}>
-                    {org.phone}
-                  </a>
+                <dt className="text-sm text-ink/50">Telephone</dt>
+                <dd className="mt-2 space-y-1.5 text-[1.0625rem] text-forest">
+                  {org.phones.map((phone) => (
+                    <p key={phone}>
+                      <a className="hover:text-palm" href={`tel:${phone.replace(/\s/g, '')}`}>
+                        {phone}
+                      </a>
+                    </p>
+                  ))}
                 </dd>
               </div>
               <div className="border-t border-forest/15 pt-5">
@@ -191,8 +198,8 @@ export default function Contact() {
         <div className="shell">
           <h2 className="text-2xl sm:text-3xl">Find the office</h2>
           <p className="mt-4 max-w-prose text-sm leading-relaxed text-frond">
-            We are on Kikwajuni Street in the Town Area of Zanzibar, a short drive from the ferry
-            terminal and Zanzibar International Airport.
+            We are in Malindi, Stone Town — next to Golden Tulip and beside the historic Masjid
+            Bamnara, a short walk from the ferry terminal.
           </p>
           <div className="mt-8 aspect-[16/7] w-full overflow-hidden border border-ivory/20">
             <iframe

@@ -18,7 +18,7 @@ export default function About() {
             <figure className="mt-10 hidden lg:block">
               <img
                 src="./assets/img/field-03.jpg"
-                alt="ZABACCO consultants in a working session at the Kikwajuni office"
+                alt="ZABACCO consultants in a working session at the Malindi office"
                 className="w-full object-cover"
                 loading="lazy"
               />

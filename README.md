@@ -113,7 +113,7 @@ badilisha function ya `submit` ndani ya `src/pages/Contact.jsx`.
 ## 6. Ramani
 
 Kwenye `Contact.jsx` kuna `iframe` ya OpenStreetMap inayoonyesha eneo la Zanzibar Town kwa ujumla.
-Badilisha `src` yake na embed link ya Google Maps ya mlango halisi wa ofisi ya Kikwajuni.
+Badilisha `src` yake na embed link ya Google Maps ya mlango halisi wa ofisi ya Malindi, Stone Town.
 
 ---
 

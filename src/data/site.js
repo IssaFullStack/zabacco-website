@@ -5,8 +5,9 @@ export const org = {
   short: 'ZABACCO',
   tagline: 'Unlocks Local Potentials',
   founded: 2010,
-  address: 'P.O. Box 2410, Kikwajuni Street, Town Area, Zanzibar, Tanzania',
-  phone: '+255 24 2238608',
+  address: 'P.O. Box 2410, Malindi, Stone Town, Zanzibar, Tanzania',
+  landmarks: 'Next to Golden Tulip and the historic Masjid Bamnara',
+  phones: ['+255 777 429 243', '+255 778 200 900'],
   email: 'info@zabacco.co.tz',
   web: 'www.zabacco.co.tz',
   hours: 'Monday to Friday, 08:00 – 16:00 East Africa Time',
@@ -455,7 +456,7 @@ export const gallery = [
   },
   {
     src: './assets/img/field-06.jpg',
-    caption: 'Partner briefing at the Kikwajuni office',
+    caption: 'Partner briefing at the ZABACCO office in Malindi, Stone Town',
   },
 ]
 
