@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { PageHeader } from '../components/Ui'
 import { org, services } from '../data/site'
+import { WhatsAppIcon, whatsappHref } from '../components/WhatsAppButton'
 
 const field =
   'w-full border-b border-forest/25 bg-transparent py-3 text-[1.0625rem] text-forest placeholder:text-ink/35 focus:border-palm focus:outline-none'
@@ -66,6 +67,20 @@ export default function Contact() {
                       </a>
                     </p>
                   ))}
+                </dd>
+              </div>
+              <div className="border-t border-forest/15 pt-5">
+                <dt className="text-sm text-ink/50">WhatsApp</dt>
+                <dd className="mt-3">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-abyss transition-transform duration-300 hover:-translate-y-0.5"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                    Message us on {org.whatsappDisplay}
+                  </a>
                 </dd>
               </div>
               <div className="border-t border-forest/15 pt-5">

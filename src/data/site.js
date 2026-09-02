@@ -8,6 +8,8 @@ export const org = {
   address: 'P.O. Box 2410, Malindi, Stone Town, Zanzibar, Tanzania',
   landmarks: 'Next to Golden Tulip and the historic Masjid Bamnara',
   phones: ['+255 777 429 243', '+255 778 200 900'],
+  whatsapp: '255777429243',
+  whatsappDisplay: '+255 777 429 243',
   email: 'info@zabacco.co.tz',
   web: 'www.zabacco.co.tz',
   hours: 'Monday to Friday, 08:00 – 16:00 East Africa Time',

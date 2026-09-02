@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
 import { nav, org, services } from '../data/site'
+import { WhatsAppIcon, whatsappHref } from './WhatsAppButton'
 
 export default function Footer() {
   return (
@@ -67,6 +68,17 @@ export default function Footer() {
               <p>
                 <a className="transition-colors hover:text-leaf" href={`mailto:${org.email}`}>
                   {org.email}
+                </a>
+              </p>
+              <p>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-leaf"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  WhatsApp
                 </a>
               </p>
               <p className="text-ivory/45">{org.hours}</p>
