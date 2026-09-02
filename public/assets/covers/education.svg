@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+<rect width="800" height="500" fill="#03170D"/>
+<path d="M 150 350 L 400 300 L 400 360 L 150 410 Z" fill="#00703A" opacity="0.32"/>
+<path d="M 400 300 L 650 350 L 650 410 L 400 360 Z" fill="#7FB927" opacity="0.28"/>
+<path d="M 150 324 L 400 274 L 400 334 L 150 384 Z" fill="#00703A" opacity="0.43"/>
+<path d="M 400 274 L 650 324 L 650 384 L 400 334 Z" fill="#7FB927" opacity="0.39"/>
+<path d="M 150 298 L 400 248 L 400 308 L 150 358 Z" fill="#00703A" opacity="0.54"/>
+<path d="M 400 248 L 650 298 L 650 358 L 400 308 Z" fill="#7FB927" opacity="0.50"/>
+<path d="M 150 272 L 400 222 L 400 282 L 150 332 Z" fill="#00703A" opacity="0.65"/>
+<path d="M 400 222 L 650 272 L 650 332 L 400 282 Z" fill="#7FB927" opacity="0.61"/>
+<path d="M 150 246 L 400 196 L 400 256 L 150 306 Z" fill="#00703A" opacity="0.76"/>
+<path d="M 400 196 L 650 246 L 650 306 L 400 256 Z" fill="#7FB927" opacity="0.72"/>
+<circle cx="400" cy="120" r="26" fill="none" stroke="#EF3B0C" stroke-width="3" opacity="0.85"/>
+</svg>

@@ -18,27 +18,38 @@ export const whatsappHref = `https://wa.me/${org.whatsapp}?text=${message}`
 
 /** Floating WhatsApp contact button, fixed to the corner of every page. */
 export default function WhatsAppButton() {
-  const [nudged, setNudged] = useState(false)
+  const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    const t = setTimeout(() => setNudged(true), 1200)
+    const t = setTimeout(() => setReady(true), 900)
     return () => clearTimeout(t)
   }, [])
 
   return (
-    <a
-      href={whatsappHref}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with ZABACCO on WhatsApp"
-      className={`group fixed bottom-6 left-6 z-40 flex items-center gap-3 rounded-full bg-[#25D366] py-3.5 pl-4 pr-4 text-abyss shadow-lift transition-all duration-700 ease-tide hover:pr-6 sm:pl-4 ${
-        nudged ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+    <div
+      className={`fixed bottom-6 left-6 z-40 transition-all duration-700 ease-tide ${
+        ready ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
       }`}
     >
-      <WhatsAppIcon className="h-6 w-6 shrink-0" />
-      <span className="hidden max-w-0 overflow-hidden whitespace-nowrap text-sm font-semibold transition-all duration-500 ease-tide group-hover:max-w-[10rem] sm:inline-block">
-        Chat on WhatsApp
-      </span>
-    </a>
+      <a
+        href={whatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with ZABACCO on WhatsApp"
+        className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_-8px_rgba(37,211,102,0.65)] ring-1 ring-white/25 transition-transform duration-500 ease-tide hover:scale-105"
+      >
+        {/* A slow halo, so the button reads as live without demanding attention */}
+        <span
+          className="wa-halo absolute inset-0 rounded-full bg-[#25D366] opacity-40"
+          aria-hidden
+        />
+        <WhatsAppIcon className="relative h-7 w-7" />
+
+        {/* Label slides out on pointer devices only */}
+        <span className="pointer-events-none absolute left-[4.25rem] hidden whitespace-nowrap rounded-full bg-abyss/95 px-4 py-2.5 text-sm font-medium text-ivory opacity-0 shadow-lift ring-1 ring-leaf/25 transition-all duration-400 ease-tide group-hover:translate-x-0 group-hover:opacity-100 nav:block nav:-translate-x-2">
+          Chat with us on WhatsApp
+        </span>
+      </a>
+    </div>
   )
 }

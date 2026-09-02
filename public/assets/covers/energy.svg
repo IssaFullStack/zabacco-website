@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+<rect width="800" height="500" fill="#03170D"/>
+<path d="M -20 100 C 200 142, 600 58, 820 100" fill="none" stroke="#00703A" stroke-width="1.6" opacity="0.22"/>
+<path d="M -20 172 C 200 214, 600 130, 820 172" fill="none" stroke="#00703A" stroke-width="1.6" opacity="0.29"/>
+<path d="M -20 244 C 200 286, 600 202, 820 244" fill="none" stroke="#00703A" stroke-width="1.6" opacity="0.36"/>
+<path d="M -20 316 C 200 358, 600 274, 820 316" fill="none" stroke="#00703A" stroke-width="1.6" opacity="0.43"/>
+<path d="M -20 388 C 200 430, 600 346, 820 388" fill="none" stroke="#00703A" stroke-width="1.6" opacity="0.50"/>
+<path d="M 88 445 L 124 120 L 156 120 L 192 445" fill="none" stroke="#7FB927" stroke-width="2.6" opacity="0.9"/>
+<line x1="100" y1="350" x2="180" y2="350" stroke="#7FB927" stroke-width="2.2" opacity="0.85"/>
+<line x1="112" y1="265" x2="168" y2="265" stroke="#7FB927" stroke-width="2.2" opacity="0.85"/>
+<path d="M 94 425 L 186 305 M 186 425 L 94 305" stroke="#00703A" stroke-width="1.4" opacity="0.6" fill="none"/>
+<circle cx="140" cy="108" r="7" fill="#EF3B0C" opacity="0.95"/>
+<path d="M 348 445 L 384 120 L 416 120 L 452 445" fill="none" stroke="#7FB927" stroke-width="2.6" opacity="0.9"/>
+<line x1="360" y1="350" x2="440" y2="350" stroke="#7FB927" stroke-width="2.2" opacity="0.85"/>
+<line x1="372" y1="265" x2="428" y2="265" stroke="#7FB927" stroke-width="2.2" opacity="0.85"/>
+<path d="M 354 425 L 446 305 M 446 425 L 354 305" stroke="#00703A" stroke-width="1.4" opacity="0.6" fill="none"/>
+<circle cx="400" cy="108" r="7" fill="#EF3B0C" opacity="0.95"/>
+<path d="M 608 445 L 644 120 L 676 120 L 712 445" fill="none" stroke="#7FB927" stroke-width="2.6" opacity="0.9"/>
+<line x1="620" y1="350" x2="700" y2="350" stroke="#7FB927" stroke-width="2.2" opacity="0.85"/>
+<line x1="632" y1="265" x2="688" y2="265" stroke="#7FB927" stroke-width="2.2" opacity="0.85"/>
+<path d="M 614 425 L 706 305 M 706 425 L 614 305" stroke="#00703A" stroke-width="1.4" opacity="0.6" fill="none"/>
+<circle cx="660" cy="108" r="7" fill="#EF3B0C" opacity="0.95"/>
+<rect x="0" y="445" width="800" height="3" fill="#7FB927" opacity="0.6"/>
+</svg>

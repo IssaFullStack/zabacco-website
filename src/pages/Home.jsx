@@ -5,6 +5,7 @@ import Carousel from '../components/Carousel'
 import { Marquee, Accordion } from '../components/Widgets'
 import {
   approach,
+  coverFor,
   differentiators,
   faqs,
   gallery,
@@ -230,10 +231,20 @@ export default function Home() {
                   key={p.title}
                   className="flex h-full flex-col bg-ivory shadow-plate transition-transform duration-500 ease-tide hover:-translate-y-1"
                 >
-                  <div className="relative flex h-40 flex-col justify-between overflow-hidden bg-forest p-6">
-                    <div className="lattice absolute -right-8 -top-8 h-40 w-40 opacity-[0.12]" aria-hidden />
-                    <span className="relative font-display text-4xl text-leaf">{p.year}</span>
-                    <span className="relative text-sm text-frond">{p.sector}</span>
+                  <div className="relative aspect-[8/5] overflow-hidden bg-abyss">
+                    <img
+                      src={coverFor(p.sector)}
+                      alt=""
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-abyss/80 via-transparent to-transparent" />
+                    <span className="absolute left-5 top-5 rounded-full bg-leaf px-3 py-1 font-display text-sm text-abyss">
+                      {p.year}
+                    </span>
+                    <span className="absolute bottom-4 left-5 right-5 text-xs font-medium text-frond">
+                      {p.sector}
+                    </span>
                   </div>
                   <div className="flex flex-1 flex-col p-7">
                     <h3 className="font-display text-xl leading-snug text-abyss">{p.title}</h3>

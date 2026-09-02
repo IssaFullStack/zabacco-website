@@ -400,6 +400,22 @@ export const projects = [
   },
 ]
 
+
+// Sector cover art. Original SVGs drawn in the brand palette — placeholders
+// until real project photography is supplied.
+export const sectorCovers = {
+  'Infrastructure and urban development': './assets/covers/infrastructure.svg',
+  'Tourism and hospitality': './assets/covers/tourism.svg',
+  'Energy and utilities': './assets/covers/energy.svg',
+  'Marine and coastal development': './assets/covers/marine.svg',
+  'Agriculture and natural resources': './assets/covers/agriculture.svg',
+  'Education and social development': './assets/covers/education.svg',
+  'Health and social development': './assets/covers/health.svg',
+}
+
+export const coverFor = (sector) =>
+  sectorCovers[sector] || './assets/covers/infrastructure.svg'
+
 export const trackRecord = [
   'Delivered environmental and social impact assessments, environmental audits and compliance studies across diverse sectors in Zanzibar and mainland Tanzania.',
   'Supported major infrastructure, tourism, energy, education, health and coastal development projects through technical and advisory services.',
