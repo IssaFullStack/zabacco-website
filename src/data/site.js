@@ -532,6 +532,8 @@ export const heroSlides = [
     cta: 'See what we do',
     ctaTo: '/services',
     image: './assets/img/field-01.jpg',
+    caption: 'Technical review session, ZABACCO office, Stone Town',
+    tags: ['Impact assessment', 'Field research', 'Advisory'],
   },
   {
     kicker: 'Environmental and social impact assessment',
@@ -540,6 +542,8 @@ export const heroSlides = [
     cta: 'Review our assignments',
     ctaTo: '/projects',
     image: './assets/img/field-04.jpg',
+    caption: 'Scoping discussion with the full assignment team',
+    tags: ['IFC Performance Standards', 'ESIA', 'Environmental audit'],
   },
   {
     kicker: 'Fieldwork and consultation',
@@ -548,6 +552,8 @@ export const heroSlides = [
     cta: 'How we work',
     ctaTo: '/approach',
     image: './assets/img/field-06.jpg',
+    caption: 'Partner briefing ahead of a coastal baseline survey',
+    tags: ['Baseline data', 'Consultation', 'Kiswahili delivery'],
   },
 ]
 
