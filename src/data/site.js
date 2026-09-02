@@ -221,6 +221,7 @@ export const team = [
     name: 'Dr. Mohamed Mbarouk Suleiman',
     role: 'Director, Research and Advisory Services',
     remit: 'Research, socio-economic studies and institutional engagement',
+    photo: './assets/img/dr-mohamed-suleiman.jpg',
     credentials: ['PhD, Education — University of Leeds'],
     bio: [
       'Dr. Mohamed Mbarouk Suleiman is a research and innovation specialist with a background in education, environmental and social research, and innovation ecosystem development. His doctoral work at Leeds covered educational policy, curriculum development and instructional practice.',

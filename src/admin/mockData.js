@@ -71,7 +71,7 @@ function buildSeed() {
   return {
     heroSlides: withIds(heroSlides),
     leadership: withIds(leadership),
-    team: withIds(team.map((t) => ({ ...t, photo: '' }))),
+    team: withIds(team.map((t) => ({ photo: '', ...t }))),
     projects: withIds(projects.map((p) => ({ ...p, featured: false }))),
     services: withIds(services),
     gallery: withIds(gallery),

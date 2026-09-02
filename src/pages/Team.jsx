@@ -76,20 +76,36 @@ export default function Team() {
           <div className="mt-14 grid gap-x-16 gap-y-14 nav:grid-cols-2">
             {team.map((person) => (
               <article key={person.name} className="border-t border-ivory/20 pt-7">
-                <h3 className="font-display text-2xl leading-tight text-ivory">
-                  {person.name}
-                </h3>
-                <p className="mt-2 text-sm font-medium text-leaf">{person.role}</p>
-                <p className="mt-1.5 text-sm text-frond/80">{person.remit}</p>
-                {person.credentials.length > 0 && (
-                  <ul className="mt-5 space-y-1.5">
-                    {person.credentials.map((c) => (
-                      <li key={c} className="text-sm leading-relaxed text-frond">
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <div className="flex flex-wrap items-start gap-5">
+                  {person.photo && (
+                    <div className="portrait w-28 shrink-0 sm:w-36">
+                      <div className="portrait__plate !p-1.5">
+                        <img
+                          src={person.photo}
+                          alt={`Portrait of ${person.name}`}
+                          className="portrait__img"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  )}
+                  <div className="min-w-[14rem] flex-1">
+                    <h3 className="font-display text-2xl leading-tight text-ivory">
+                      {person.name}
+                    </h3>
+                    <p className="mt-2 text-sm font-medium text-leaf">{person.role}</p>
+                    <p className="mt-1.5 text-sm text-frond/80">{person.remit}</p>
+                    {person.credentials.length > 0 && (
+                      <ul className="mt-5 space-y-1.5">
+                        {person.credentials.map((c) => (
+                          <li key={c} className="text-sm leading-relaxed text-frond">
+                            {c}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
                 <div className="mt-5 space-y-4">
                   {person.bio.map((p, i) => (
                     <p key={i} className="text-[0.95rem] leading-relaxed text-ivory/70">
