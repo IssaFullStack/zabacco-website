@@ -86,9 +86,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap gap-x-8 gap-y-2 border-t border-ivory/12 pt-6 text-xs text-ivory/45">
-          <p>© {new Date().getFullYear()} {org.short}. All rights reserved.</p>
-          <p>Registered and operating in Zanzibar, United Republic of Tanzania.</p>
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-x-8 gap-y-3 border-t border-ivory/12 pb-16 pt-6 text-xs text-ivory/45 sm:pb-0">
+          <div className="flex flex-wrap gap-x-8 gap-y-2">
+            <p>© {new Date().getFullYear()} {org.short}. All rights reserved.</p>
+            <p>Registered and operating in Zanzibar, United Republic of Tanzania.</p>
+          </div>
+          <p>
+            Developed and maintained by{' '}
+            <a
+              href="https://techmento.co.tz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-ivory/70 transition-colors hover:text-leaf"
+            >
+              Techmento
+            </a>
+          </p>
         </div>
       </div>
     </footer>
