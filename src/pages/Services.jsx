@@ -1,8 +1,47 @@
+import { useCallback, useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { PageHeader, ContactCta, SectionHead } from '../components/Ui'
 import { Accordion } from '../components/Widgets'
 import { services, faqs } from '../data/site'
 
 export default function Services() {
+  const { hash } = useLocation()
+  const [active, setActive] = useState(services[0].slug)
+
+  // Scroll a section into view without touching the URL hash, which the
+  // hash router would otherwise read as a route change.
+  const goToSection = useCallback((slug) => {
+    const el = document.getElementById(slug)
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    setActive(slug)
+  }, [])
+
+  // Honour /services#esia arriving from the footer or the home page.
+  useEffect(() => {
+    const slug = hash.replace('#', '')
+    if (!slug) return
+    const t = setTimeout(() => goToSection(slug), 120)
+    return () => clearTimeout(t)
+  }, [hash, goToSection])
+
+  // Highlight whichever section is currently in view.
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id)
+        })
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    )
+    services.forEach((s) => {
+      const el = document.getElementById(s.slug)
+      if (el) io.observe(el)
+    })
+    return () => io.disconnect()
+  }, [])
+
   return (
     <>
       <PageHeader
@@ -11,16 +50,25 @@ export default function Services() {
         intro="Our services combine technical expertise, field experience and evidence-based methods. Every project we take on is expected to create value for the client, the community and the environment."
       />
 
-      <nav className="sticky top-[4.5rem] z-30 border-b border-forest/12 bg-ivory/95 backdrop-blur">
-        <div className="shell flex gap-6 overflow-x-auto py-4 text-sm">
+      <nav
+        className="sticky top-[4.5rem] z-30 border-b border-forest/12 bg-ivory/95 backdrop-blur"
+        aria-label="Service lines"
+      >
+        <div className="shell flex gap-2 overflow-x-auto py-3 text-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {services.map((s) => (
-            <a
+            <button
               key={s.slug}
-              href={`#${s.slug}`}
-              className="whitespace-nowrap text-ink/60 transition-colors hover:text-palm"
+              type="button"
+              onClick={() => goToSection(s.slug)}
+              aria-current={active === s.slug}
+              className={`whitespace-nowrap rounded-full border px-4 py-2 transition-colors duration-300 ${
+                active === s.slug
+                  ? 'border-palm bg-palm text-ivory'
+                  : 'border-ink/15 text-ink/60 hover:border-palm hover:text-palm'
+              }`}
             >
-              {s.title.split(' and ')[0]}
-            </a>
+              {s.short}
+            </button>
           ))}
         </div>
       </nav>
