@@ -59,8 +59,8 @@ export default function Carousel({ children, label, slideClass = 'w-[86%] sm:w-[
         ))}
       </div>
 
-      <div className="mt-7 flex items-center justify-between gap-6">
-        <div className="flex gap-2">
+      <div className="mt-7 flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+        <div className="flex min-w-0 flex-1 flex-wrap gap-2">
           {items.map((_, i) => (
             <button
               key={i}
@@ -75,7 +75,7 @@ export default function Carousel({ children, label, slideClass = 'w-[86%] sm:w-[
           ))}
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex shrink-0 gap-2">
           <button
             type="button"
             onClick={() => scrollBy(-1)}

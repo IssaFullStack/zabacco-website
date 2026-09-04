@@ -54,7 +54,7 @@ export default function Projects() {
               >
                 <div className="relative aspect-[8/5] overflow-hidden bg-abyss">
                   <img
-                    src={coverFor(p.sector)}
+                    src={p.cover || coverFor(p.sector)}
                     alt=""
                     className="h-full w-full object-cover transition-transform duration-[900ms] ease-tide group-hover:scale-105"
                     loading="lazy"

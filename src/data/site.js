@@ -323,6 +323,33 @@ export const sectors = [
 
 export const projects = [
   {
+    year: 'Recent',
+    title: 'Oilcom Airport Depot Project',
+    client: 'Oilcom',
+    sector: 'Energy and utilities',
+    service: 'Environmental and Social Impact Assessment',
+    cover: './assets/img/oilcom-01.jpg',
+    gallery: 'Oilcom Airport Depot Project',
+  },
+  {
+    year: 'Recent',
+    title: 'Higher Education for Economic Transformation (HEET) Project',
+    client: 'State University of Zanzibar',
+    sector: 'Education and social development',
+    service: 'Stakeholder consultation and environmental and social assessment',
+    cover: './assets/img/heet-01.jpg',
+    gallery: 'SUZA HEET Project',
+  },
+  {
+    year: 'Recent',
+    title: 'Zanzibar Disaster Profile',
+    client: 'Disaster Management Commission (DMC)',
+    sector: 'Health and social development',
+    service: 'Disaster risk profiling, community consultation and data collection',
+    cover: './assets/img/dmc-01.jpg',
+    gallery: 'Zanzibar Disaster Profile — DMC',
+  },
+  {
     year: '2025',
     title: 'Niamembe Wellness Resort Project',
     client: 'Maisha Company Ltd',

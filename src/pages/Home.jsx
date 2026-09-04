@@ -233,7 +233,7 @@ export default function Home() {
                 >
                   <div className="relative aspect-[8/5] overflow-hidden bg-abyss">
                     <img
-                      src={coverFor(p.sector)}
+                      src={p.cover || coverFor(p.sector)}
                       alt=""
                       className="h-full w-full object-cover"
                       loading="lazy"
@@ -294,18 +294,15 @@ export default function Home() {
           </div>
           <div className="mt-10">
             <Carousel label="Photographs from ZABACCO assignments">
-              {gallery.filter((g) => g.project !== 'Office and partners').map((g) => (
+              {gallery.filter((g) => g.project === 'Office and partners').map((g) => (
                 <figure key={g.src} className="group relative overflow-hidden bg-forest">
                   <img
                     src={g.src}
                     alt={g.caption}
                     className="h-72 w-full object-cover transition-transform duration-700 ease-tide group-hover:scale-[1.05]"
                   />
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss via-abyss/80 to-transparent p-5 pt-20">
-                    <span className="block text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-leaf">
-                      {g.project}
-                    </span>
-                    <span className="mt-1.5 block text-sm leading-snug text-ivory">{g.caption}</span>
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-abyss/95 to-transparent p-5 pt-16 text-sm leading-snug text-ivory">
+                    {g.caption}
                   </figcaption>
                 </figure>
               ))}
