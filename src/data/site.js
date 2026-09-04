@@ -452,33 +452,118 @@ export const differentiators = [
   },
 ]
 
+export const galleryProjects = [
+  'All work',
+  'Oilcom Airport Depot Project',
+  'SUZA HEET Project',
+  'Zanzibar Disaster Profile — DMC',
+  'Office and partners',
+]
+
 export const gallery = [
+  // Oilcom Airport Depot Project — site assessment
+  {
+    src: './assets/img/oilcom-01.jpg',
+    project: 'Oilcom Airport Depot Project',
+    caption: 'Site walkover with the client team, Oilcom Airport Depot Project',
+  },
+  {
+    src: './assets/img/oilcom-02.jpg',
+    project: 'Oilcom Airport Depot Project',
+    caption: 'Cleared ground and exposed coral rag across the proposed depot footprint',
+  },
+  {
+    src: './assets/img/oilcom-03.jpg',
+    project: 'Oilcom Airport Depot Project',
+    caption: 'Access route and adjoining land use along the site boundary',
+  },
+  {
+    src: './assets/img/oilcom-04.jpg',
+    project: 'Oilcom Airport Depot Project',
+    caption: 'Vegetation cover and neighbouring properties bordering the site',
+  },
+
+  // SUZA students consultation — HEET Project
+  {
+    src: './assets/img/heet-01.jpg',
+    project: 'SUZA HEET Project',
+    caption: 'Consultation session at the State University of Zanzibar, HEET Project',
+  },
+  {
+    src: './assets/img/heet-02.jpg',
+    project: 'SUZA HEET Project',
+    caption: 'Discussion with faculty and technical staff in the renewable energy laboratory',
+  },
+  {
+    src: './assets/img/heet-03.jpg',
+    project: 'SUZA HEET Project',
+    caption: 'Student consultation forum, HEET Project',
+  },
+  {
+    src: './assets/img/heet-04.jpg',
+    project: 'SUZA HEET Project',
+    caption: 'Stakeholder meeting on training facilities and equipment needs',
+  },
+  {
+    src: './assets/img/heet-05.jpg',
+    project: 'SUZA HEET Project',
+    caption: 'Working session with departmental representatives at SUZA',
+  },
+
+  // Zanzibar Disaster Profile — DMC Project
+  {
+    src: './assets/img/dmc-01.jpg',
+    project: 'Zanzibar Disaster Profile — DMC',
+    caption: 'Community consultation with fishers, Zanzibar Disaster Profile, DMC Project',
+  },
+  {
+    src: './assets/img/dmc-02.jpg',
+    project: 'Zanzibar Disaster Profile — DMC',
+    caption: 'Key informant interview during data collection',
+  },
+  {
+    src: './assets/img/dmc-03.jpg',
+    project: 'Zanzibar Disaster Profile — DMC',
+    caption: 'Briefing with community members ahead of a field survey',
+  },
+  {
+    src: './assets/img/dmc-04.jpg',
+    project: 'Zanzibar Disaster Profile — DMC',
+    caption: 'Institutional consultation during the disaster profiling assignment',
+  },
+
+  // Office and partners
   {
     src: './assets/img/field-01.jpg',
-    caption: 'Technical review session with international partners, ZABACCO office, Zanzibar',
+    project: 'Office and partners',
+    caption: 'Technical review session with international partners, ZABACCO office',
   },
   {
     src: './assets/img/field-02.jpg',
+    project: 'Office and partners',
     caption: 'Scoping discussion with the full assignment team',
   },
   {
     src: './assets/img/field-03.jpg',
+    project: 'Office and partners',
     caption: 'Methodology and study design workshop',
   },
   {
     src: './assets/img/field-04.jpg',
+    project: 'Office and partners',
     caption: 'Consultants and partners reviewing baseline data',
   },
   {
     src: './assets/img/field-05.jpg',
+    project: 'Office and partners',
     caption: 'Coordination meeting on a coastal assessment',
   },
   {
     src: './assets/img/field-06.jpg',
+    project: 'Office and partners',
     caption: 'Partner briefing at the ZABACCO office in Malindi, Stone Town',
   },
 ]
-
 
 export const approach = [
   {
